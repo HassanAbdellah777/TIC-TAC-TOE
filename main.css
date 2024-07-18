@@ -1,0 +1,139 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  box-sizing: border-box;
+}
+.game {
+  background-color: #eee;
+  height: 100vh;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (width<768px) {
+  .game {
+    padding: 80px 0;
+  }
+}
+.game .player-x,
+.game .player-o {
+  display: none;
+  font-size: 60px;
+  text-align: center;
+  margin-top: 20px;
+}
+@media (width<768px) {
+  .game .player-x,
+  .game .player-o {
+    font-size: 40px;
+  }
+}
+.game .player-x {
+  color: blue;
+}
+.game .player-x.win {
+  width: 100%;
+  height: 80px;
+  padding: 10px;
+  background-color: blue;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.game .player-o.win {
+  width: 100%;
+  height: 80px;
+  padding: 10px;
+  background-color: green;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+@media (width<768px) {
+  .game .player-x.win,
+  .game .player-o.win {
+    font-size: 32px;
+  }
+}
+.game .player-x.turn {
+  display: block;
+}
+.game .player-o {
+  color: green;
+}
+.game .player-o.turn {
+  display: block;
+}
+.game .turn {
+  display: block;
+}
+.container {
+  width: 450px;
+  height: 450px;
+  background-color: lightblue;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  gap: 5px;
+  background-color: white;
+}
+@media (width<768px) {
+  .container {
+    width: 300px;
+    height: 300px;
+  }
+}
+.cube {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightblue;
+  width: 32%;
+  height: 32%;
+  font-size: 100px;
+}
+@media (width<768px) {
+  .cube {
+    font-size: 40px;
+  }
+}
+
+.play-again {
+  display: none;
+  background-color: orange;
+  color: white;
+  font-size: 40px;
+  width: 300px;
+  height: 100px;
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+  transition: 0.3s;
+}
+@media (width<768px) {
+  .play-again {
+    width: 150px;
+    height: 80px;
+    font-size: 24px;
+  }
+}
+
+.play-again:hover {
+  transform: scale(1.1);
+}
