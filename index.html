@@ -7,22 +7,38 @@
     <link rel="stylesheet" href="main.css" />
   </head>
   <body>
-    <div class="game">
-      <div class="player-x">Player X Turn</div>
-      <div class="player-o turn">Player O Turn</div>
-      <div class="container">
-        <div class="cube no1"></div>
-        <div class="cube no2"></div>
-        <div class="cube no3"></div>
-        <div class="cube no4"></div>
-        <div class="cube no5"></div>
-        <div class="cube no6"></div>
-        <div class="cube no7"></div>
-        <div class="cube no8"></div>
-        <div class="cube no9"></div>
+    <div class="main-page">
+      <h2>TIC - TAC - TOE GAME</h2>
+      <div class="game">
+        <div class="header">
+          <div class="game-status"></div>
+          <!-- <div class="player-x">Player X Turn</div>
+          <div class="player-o turn">Player O Turn</div>
+          <div class="draw">Game Draw</div> -->
+        </div>
+        <div class="game-body">
+          <div class="container">
+            <div class="cube no1"></div>
+            <div class="cube no2"></div>
+            <div class="cube no3"></div>
+            <div class="cube no4"></div>
+            <div class="cube no5"></div>
+            <div class="cube no6"></div>
+            <div class="cube no7"></div>
+            <div class="cube no8"></div>
+            <div class="cube no9"></div>
+          </div>
+        </div>
+
+        <div class="footer">
+          <div>X : <span class="x-game">0</span></div>
+          <div>O : <span class="o-game">0</span></div>
+          <div>Draw : <span class="d-game">0</span></div>
+        </div>
       </div>
       <button class="play-again">Play Again</button>
     </div>
+
     <script src="main.js"></script>
   </body>
 </html>

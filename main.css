@@ -6,134 +6,169 @@
 body {
   box-sizing: border-box;
 }
-.game {
-  background-color: #eee;
+.main-page {
+  background-color: rgba(0, 0, 0, 0.411);
   height: 100vh;
-  padding: 30px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  gap: 20px;
+  color: white;
+}
+.game {
+  /* padding: 20px; */
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  align-items: center;
+  align-content: center;
+  gap: 20px;
+  padding: 20px;
+  border: 1px solid white;
+  border-radius: 12px;
+  box-shadow: 0px 0px 10px 2px white;
+  background-color: #aaa;
 }
 @media (width<768px) {
   .game {
-    padding: 80px 0;
+    /* padding: 80px 0; */
   }
 }
-.game .player-x,
-.game .player-o {
-  display: none;
-  font-size: 60px;
+.header {
+  /* height: 20%; */
+  width: 300px;
+  display: flex;
+}
+.game-status {
+  background-color: rgb(43, 126, 153);
+  border-radius: 12px;
+  width: 100%;
+  font-size: 32px;
   text-align: center;
-  margin-top: 20px;
+  padding: 10px;
+  color: white;
 }
 @media (width<768px) {
   .game .player-x,
-  .game .player-o {
-    font-size: 40px;
+  .game .player-o .game .draw {
+    font-size: 30px;
   }
 }
-.game .player-x {
-  color: blue;
-}
-.game .player-x.win {
-  width: 100%;
-  height: 80px;
-  padding: 10px;
-  background-color: blue;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-}
-.game .player-o.win {
-  width: 100%;
-  height: 80px;
-  padding: 10px;
-  background-color: green;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
+
+.game .draw.active {
+  display: block;
+  background-color: orange;
 }
 @media (width<768px) {
-  .game .player-x.win,
-  .game .player-o.win {
+  .game .player-x.draw {
     font-size: 32px;
   }
 }
-.game .player-x.turn {
-  display: block;
-}
-.game .player-o {
-  color: green;
-}
-.game .player-o.turn {
-  display: block;
-}
-.game .turn {
-  display: block;
-}
+
+/* .game-body {
+  height: 70%;
+} */
 .container {
-  width: 450px;
-  height: 450px;
-  background-color: lightblue;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;
+  width: 300px;
+  height: 300px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
-  gap: 5px;
-  background-color: white;
+  gap: 3px;
+  /* background-color: white; */
+
+  /* background-color: white; */
 }
-@media (width<768px) {
-  .container {
-    width: 300px;
-    height: 300px;
-  }
+/* .container::before {
+  content: "";
+  position: absolute;
+  background-color: white;
+  height: 3px;
+  width: 20px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: left;
+  transition: 0.5s;
+}
+/* .container.row1::before { */
+  rotate: 45deg;
+}
+.container.row2::before {
+  rotate: 180deg;
+}
+.container.row3::before {
+  rotate: 250deg;
+} */
+.container.row3::before {
+  width: 280px;
 }
 .cube {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: lightblue;
+  background-color: rgb(43, 126, 153);
+  color: white;
   width: 32%;
   height: 32%;
-  font-size: 100px;
+  font-size: 30px;
+  cursor: pointer;
 }
-@media (width<768px) {
+.cube:hover {
+  background-color: rgba(43, 125, 153, 0.568);
+}
+/* @media (width<768px) {
   .cube {
-    font-size: 40px;
+    font-size: 30px;
   }
-}
-
+} */
+/* .footer {
+  height: 20%;
+} */
 .play-again {
-  display: none;
-  background-color: orange;
+  visibility: hidden;
+  background-color: rgb(55, 145, 44);
   color: white;
-  font-size: 40px;
-  width: 300px;
-  height: 100px;
-  padding: 10px;
-  margin-top: 20px;
+  font-size: 32px;
+  /* margin-top: 20px; */
   border-radius: 10px;
   cursor: pointer;
   border: none;
   transition: 0.3s;
+  padding: 10px;
+  animation-name: flashing;
+  animation: flashing ease infinite 0.3s;
 }
+
 @media (width<768px) {
   .play-again {
     width: 150px;
-    height: 80px;
     font-size: 24px;
   }
 }
 
-.play-again:hover {
-  transform: scale(1.1);
+@keyframes flashing {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+.footer {
+  display: flex;
+  width: 300px;
+  justify-content: space-around;
+  color: white;
+  font-size: 18px;
+  background-color: rgb(43, 126, 153);
+  padding: 10px;
+  border-radius: 12px;
+
+  /* align-items: center; */
 }
