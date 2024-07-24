@@ -26,7 +26,7 @@ cubes.forEach((cube) => {
         e.target.textContent = "X";
         checkWinner("X");
         //continue game
-        if (gameResult != "X") {
+        if (gameResult != "X" && gameResult != "draw") {
           gameTurn = "O";
           gameStatus.textContent = "O turn";
         }
@@ -35,7 +35,7 @@ cubes.forEach((cube) => {
         e.target.textContent = "O";
         checkWinner("O");
         //continue game
-        if (gameResult != "O") {
+        if (gameResult != "O" && gameResult != "draw") {
           gameTurn = "X";
           gameStatus.textContent = "X turn";
           // e.display = "block";
@@ -114,10 +114,9 @@ function declareWinner(check) {
     xCount += 1;
     xGame.textContent = xCount;
   } else if (check === "draw") {
-    gameStatus.textContent = "Game Draw";
-    playAgainBtn.style.display = "block";
-    // draw.classList.add("active");
     gameResult = "draw";
+    gameStatus.textContent = "Game Draw";
+    // draw.classList.add("active");
     dCount += 1;
     dGame.textContent = dCount;
   } else {

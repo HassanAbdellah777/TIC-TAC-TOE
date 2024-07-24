@@ -93,8 +93,8 @@ body {
   transform: translate(-50%, -50%);
   transform-origin: left;
   transition: 0.5s;
-}
-/* .container.row1::before { */
+} */
+/* .container.row1::before {
   rotate: 45deg;
 }
 .container.row2::before {
@@ -118,7 +118,7 @@ body {
   cursor: pointer;
 }
 .cube:hover {
-  background-color: rgba(43, 125, 153, 0.568);
+  background-color: rgba(25, 66, 80, 0.849);
 }
 /* @media (width<768px) {
   .cube {
